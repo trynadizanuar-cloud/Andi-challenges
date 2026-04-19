@@ -1,0 +1,1 @@
+/home/andi/Desktop/Rubicamp/LATIHAN_ARRAY/rs/target/debug/cobarust: /home/andi/Desktop/Rubicamp/LATIHAN_ARRAY/rs/src/c_array/c9.rs /home/andi/Desktop/Rubicamp/LATIHAN_ARRAY/rs/src/c_array/mod.rs /home/andi/Desktop/Rubicamp/LATIHAN_ARRAY/rs/src/main.rs

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JSON CRUD</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <h1>JSON CRUD (Create, Read, Update, Delete)</h1> 
+
+  <a href="/add" class="btn">Create</a>
+
+  <table>
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Birthdate</th>
+      <th>Married</th>
+      <th>Action</th>
+    </tr>
+
+    <% data.forEach((item, index)=> { %>
+      <tr>
+        <td>
+          <%= index + 1 %>
+        </td>
+        <td>
+          <%= item.name %>
+        </td>
+        <td>
+          <%= item.height %>
+        </td>
+        <td>
+          <%= item.weight %>
+        </td>
+        <td>
+          <%= item.birthdate %>
+        </td>
+        <td>
+          <%= item.married ? "Yes" : "No" %>
+        </td>
+        <td>
+          <a class="btn btn-red" href="/edit/<%= index %>">Update</a> |
+          <a class="btn btn-blue" href="/delete/<%= index %>" onclick="return confirm('Delete data?')">Delete</a>
+        </td>
+      </tr>
+      <% }) %>
+  </table>
+</body>
+
+</html>

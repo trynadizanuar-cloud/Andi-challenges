@@ -1,0 +1,1 @@
+SELECT first_name, last_name, salary FROM employees WHERE salary > 55000 AND department = "Engineering"  

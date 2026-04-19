@@ -1,0 +1,1 @@
+/home/andi/Desktop/Rubicamp/LATIHAN_function/cobarust/target/debug/cobarust: /home/andi/Desktop/Rubicamp/LATIHAN_function/cobarust/src/c_function/c10.rs /home/andi/Desktop/Rubicamp/LATIHAN_function/cobarust/src/c_function/mod.rs /home/andi/Desktop/Rubicamp/LATIHAN_function/cobarust/src/main.rs

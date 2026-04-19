@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SQLite CRUD </title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <h1>SQLite CRUD (Create, Read, Update, Delete)</h1>
+
+  <a href="/add" class="btn">Create</a>
+
+  <table>
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Birthdate</th>
+      <th>Married</th>
+      <th>Action</th>
+    </tr>
+
+    <% data.forEach((item, index)=> { %>
+      <tr>
+        <td>
+          <%= index + 1 %>
+        </td>
+        <td>
+          <%= item.name %>
+        </td>
+        <td>
+          <%= item.height %>
+        </td>
+        <td>
+          <%= item.weight %>
+        </td>
+        <td>
+          <%= item.birthdate %>
+        </td>
+        <td>
+          <%= item.married ? "Yes" : "No" %>
+        </td>
+        <td>
+          <a href="/edit/<%= item.id %>">Update</a> |
+          <a href="/delete/<%= item.id %>" onclick="return confirm('Delete data?')">Delete</a>
+        </td>
+      </tr>
+      <% }) %>
+  </table>
+</body>
+
+</html>

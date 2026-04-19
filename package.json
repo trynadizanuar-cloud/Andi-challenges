@@ -1,11 +1,25 @@
 {
   "name": "rubicamp",
   "version": "1.0.0",
-  "type": "module",
   "dependencies": {
-    "prompt-sync": "^4.2.0"
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "prompt-sync": "^4.2.0",
+    "sqlite3": "^6.0.1"
   },
   "devDependencies": {
     "@types/prompt-sync": "^4.2.3"
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trynadizanuar-cloud/Andi-challenges.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

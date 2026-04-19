@@ -1,0 +1,101 @@
+
+/* Reset sederhana */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Judul */
+h1 {
+  color: #333;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  text-align: left;
+}
+
+/* Form */
+form {
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Label */
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Input & select */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Tombol umum */
+.btn {
+  width: 100px;
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Hover tombol */
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* Tombol merah (Back/Delete) */
+.btn-red {
+  background-color: red;
+}
+
+.btn-red:hover {
+  background-color: darkred;
+}
+
+/* Link action di table */
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}

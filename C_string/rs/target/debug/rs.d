@@ -1,0 +1,1 @@
+/home/andi/Desktop/Rubicamp/C_string/rs/target/debug/rs: /home/andi/Desktop/Rubicamp/C_string/rs/src/c_string/c7.rs /home/andi/Desktop/Rubicamp/C_string/rs/src/c_string/mod.rs /home/andi/Desktop/Rubicamp/C_string/rs/src/main.rs

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <h1>Daftar Siswa</h1>
+    <a href="/add" class="btn">Tambah</a>
+
+    <table>
+        <tr>
+            <th>Nis</th>
+            <th>Nama</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+        <% data.forEach(item=> { %>
+            <tr>
+                <td>
+                    <%= item.nis %>
+                </td>
+                <td>
+                    <%= item.nama %>
+                </td>
+                <td>
+                    <%= item.address %>
+                </td>
+                <td>
+                    <a href="/delete/<%= item.nis %>" onclick="return confirm ('Apakah Anda Yakin ?')">Delete</a>
+                    <a href="/edit/<%= item.nis %>">Edit</a>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+
+</body>
+
+</html>

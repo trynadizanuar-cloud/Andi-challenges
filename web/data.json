@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Himawan",
+    "height": 168,
+    "weight": 80.52,
+    "birthdate": "1991-03-12",
+    "married": false
+  },
+  {
+    "name": "Rahmat",
+    "height": 171,
+    "weight": 57.699,
+    "birthdate": "1996-11-03",
+    "married": true
+  }
+]
