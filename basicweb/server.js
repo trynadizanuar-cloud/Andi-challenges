@@ -23,19 +23,14 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
+const path = require('path')
 
-let data = [
-    {
-        nis: "001",
-        nama: "Andi",
-        address: "Bandung"
-    },
-    {
-        nis: "002",
-        nama: "Dzikri",
-        address: "Kupang"
-    }
-]
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database(
+    path.join(__dirname, 'db', 'data.db')
+);
+
+
 
 app.set('view engine', 'ejs')
 // parse application/x-www-form-urlencoded
@@ -47,26 +42,41 @@ app.use(bodyParser.json())
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.render('index', { data })
-})
-
+    db.all("SELECT * FROM siswa", (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.send("Terjadi error");
+        }
+        res.render('index', { data });
+    });
+});
 app.get('/add', (req, res) => {
     res.render('form', { item: {} })
 })
 
 app.post('/add', (req, res) => {
-    data.push(req.body)
+    db.run("INSERT INTO SISWA (nis, nama, address) VALUES (?,?,?)", [req.body.nis, req.body.nama, req.body.address], (err) => {
+        if (err) return console.log(err)
+    })
     res.redirect('/')
 })
 
 app.get('/delete/:nis', (req, res) => {
-    data = data.filter(item => item.nis !== req.params.nis)
-    res.redirect('/')
+    db.run("DELETE FROM siswa WHERE nis=?", [req.params.nis], (err) => {
+        if (err) return console.log(err)
+        res.redirect('/')
+
+    })
 })
 
 app.get('/edit/:nis', (req, res) => {
-    items = data.filter(item => item.nis == req.params.nis)
-    res.render('form', { item: items[0] })
+    db.get("SELECT * FROM siswa WHERE nis=? ", [req.params.nis], (err, data) => {
+        if (err) {
+            console.error(err);
+            return res.send("Terjadi error");
+        }
+        res.render('form', { item: data })
+    })
 })
 
 app.post('/edit/:nis', (req, res) => {
