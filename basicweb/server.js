@@ -80,14 +80,14 @@ app.get('/edit/:nis', (req, res) => {
 })
 
 app.post('/edit/:nis', (req, res) => {
-    data = data.map(item => {
-        if (item.nis == req.params.nis) {
-            item.nama = req.body.nama,
-                item.address = req.body.address
+    db.run(
+        "UPDATE siswa SET nis=?, nama=?, address=? WHERE nis=?",
+        [req.body.nis, req.body.nama, req.body.address, req.params.nis],
+        (err) => {
+            if (err) return console.log(err)
+            res.redirect('/')
         }
-        return item
-    })
-    res.redirect('/')
+    )
 })
 app.listen(port, () => {
     console.log(`Web appa jalan di port ${port}`)

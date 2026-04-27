@@ -29,8 +29,8 @@
                     <%= item.address %>
                 </td>
                 <td>
-                    <a href="/delete/<%= item.nis %>" onclick="return confirm ('Apakah Anda Yakin ?')">Delete</a>
                     <a href="/edit/<%= item.nis %>">Edit</a>
+                    <a href="/delete/<%= item.nis %>" onclick="return confirm ('Apakah Anda Yakin ?')">Delete</a>
                 </td>
             </tr>
             <% }) %>
