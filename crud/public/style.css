@@ -1,0 +1,113 @@
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+h2 {
+    text-align: left;
+}
+
+.btn {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #4a00e0;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: white;
+    color: rgb(9, 0, 0);
+}
+
+td,
+th {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #eee;
+}
+
+/* ================= FORM PAGE ONLY ================= */
+
+.form-page {
+    background: #f5f5f5;
+}
+
+/* judul */
+.form-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* container abu-abu */
+.form-container {
+    width: 100%;
+    margin: 20px auto;
+    background: #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* form layout */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* input & select */
+.form-container input,
+.form-container select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* tombol save (hijau) */
+.btn-save {
+    background: #00a86b;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* tombol cancel (ungu) */
+.btn-cancel {
+    background: #4a00e0;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  display: block;
+}
+
+.btn-save,
+.btn-cancel {
+  width: 100%;
+  display: block;
+}

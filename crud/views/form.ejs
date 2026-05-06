@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body class="form-page">
+    <h2 class="form-title">Adding Data</h2>
+
+    <div class="form-container">
+        <form action="" method="POST">
+            <input type="text" name="name" placeholder="insert your name" value="<%= item.name || '' %>" required>
+
+            <input type="number" name="height" placeholder="insert your height" value="<%= item.height || '' %>"
+                required>
+
+            <input type="number" name="weight" placeholder="insert your weight" value="<%= item.weight || '' %>"
+                required>
+
+            <input type="date" name="birthdate"
+                value="<%= item.birthdate ? new Date(item.birthdate).toISOString().split('T')[0] : '' %>" required>
+
+            <select name="married">
+                <option value="">have you married ?</option>
+                <option value="1" <%=item.married===true ? 'selected' : '' %>>Yes</option>
+                <option value="0" <%=item.married===false ? 'selected' : '' %>>No</option>
+            </select>
+            <button type="submit" class="btn-save">Save</button>
+            <a href="/" class="btn-cancel">Cancel</a>
+        </form>
+    </div>
+
+    <link rel="stylesheet" href="/style.css">
+</body>
+
+</html>

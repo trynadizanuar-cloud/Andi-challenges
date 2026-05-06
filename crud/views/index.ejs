@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <h2>POSTGRESQL CRUD (Create, Read, Update, Delete)</h2>
+    <link rel="stylesheet" href="/style.css">
+
+    <a href="/add" class="btn">Create</a>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Height</th>
+            <th>Weight</th>
+            <th>Birth Date</th>
+            <th>Is Married</th>
+            <th>Action</th>
+        </tr>
+
+        <% users.forEach((item, index)=> { %>
+            <tr>
+                <td>
+                    <%= index + 1 %>
+                </td>
+                <td>
+                    <%= item.name %>
+                </td>
+                <td>
+                    <%= item.height %>
+                </td>
+                <td>
+                    <%= item.weight %>
+                </td>
+                <td>
+                    <%= item.birthdate ? new Date(item.birthdate).toLocaleDateString('en-CA') : '-' %>
+                </td>
+                <td>
+                    <%= item.married ? "Yes" : "No" %>
+                </td>
+                <td>
+                    <a href="/update/<%= item.id %>">Update</a> |
+                    <a href="/delete/<%= item.id %>" onclick="return confirm('Delete data?')">Delete</a>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+
+</body>
+
+</html>
