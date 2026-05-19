@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+
+<h2>Adding Data</h2>
+
+<form action="" method="POST">
+
+    <input type="text" name="name" placeholder="insert your name" value="<%= item.name || '' %>">
+
+    <input type="number" name="height" placeholder="insert your height" value="<%= item.height || '' %>">
+
+    <input type="text" name="weight" placeholder="insert your weight" value="<%= item.weight || '' %>">
+
+    <input type="date" name="birthdate"
+        value="<%= item.birthdate ? new Date(item.birthdate).toISOString().split('T')[0] : '' %>">
+
+    <select name="married">
+
+        <option value="">Have you married?</option>
+
+        <option value="1" <%=item.married===true ? 'selected' : '' %>>
+            Yes
+        </option>
+
+        <option value="0" <%=item.married===false ? 'selected' : '' %>>
+            No
+        </option>
+
+    </select>
+
+</form>
+
+</body>
+
+</html>
