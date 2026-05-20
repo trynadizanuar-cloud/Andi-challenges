@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORM</title>
 </head>
-
+<link rel="stylesheet" href="style.css">
 <h2>Adding Data</h2>
 
 <form action="" method="POST">
@@ -16,11 +16,8 @@
     <input type="number" name="height" placeholder="insert your height" value="<%= item.height || '' %>">
 
     <input type="text" name="weight" placeholder="insert your weight" value="<%= item.weight || '' %>">
-
-    <input type="date" name="birthdate"
-        value="<%= item.birthdate ? new Date(item.birthdate).toISOString().split('T')[0] : '' %>">
-
-    <select name="married">
+    <input type="date" name="birth_date" value="<%= item.birth_date ? item.birth_date.split('T')[0] : '' %>"> <select
+        name="married">
 
         <option value="">Have you married?</option>
 
@@ -31,8 +28,9 @@
         <option value="0" <%=item.married===false ? 'selected' : '' %>>
             No
         </option>
-
     </select>
+    <button type="submit" class="btn-save">Save</button>
+    <a href="/" class="btn-cancel">Cancel</a>
 
 </form>
 
