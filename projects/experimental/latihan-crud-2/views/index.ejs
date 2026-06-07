@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CRUD(Create,Read,Update,Delete)</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <h2>CRUD POSGREESQL (CREATE,READ,UPDATE,DELETE)</h2>
-    <link rel="stylesheet" href="style.css">
-    <a href="create" class="btn">Create</a>
+    <a href="create" class="btn btn-create">Create</a>
     <table>
         <tr>
             <th>No</th>
@@ -37,10 +38,10 @@
                     <%= item.weight %>
                 </td>
                 <td>
-                    <%= item.birth_date ? new Date(item.birth_date).toLocaleDateString('en-CA') : '-' %> %>
+                    <%= item.birth_date ? new Date(item.birth_date).toLocaleDateString('en-CA') : '-' %>
                 </td>
                 <td>
-                    <%= item.married ? "Yes" : "No" %>
+                    <%= item.married ? "Yes" : "Not Yet" %>
                 </td>
                 <td>
                     <a href="/update/<%= item.id %>">Update</a>
