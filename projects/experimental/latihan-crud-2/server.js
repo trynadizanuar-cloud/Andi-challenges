@@ -26,14 +26,14 @@ app.get('/', (req, res) => {
 })
 
 app.get('/create', (req, res) => {
-    res.render('add', { item: {} })
+    res.render('form', { item: {} })
 })
 
 app.post('/create', (req, res) => {
 
     db.query(
         "INSERT INTO users (name, height, weight, birth_date, is_married) VALUES ($1,$2,$3,$4,$5)",
-        [req.body.name, req.body.height, req.body.weight, req.body.birth_date, req.body.married === '1'],
+        [req.body.name, req.body.height, req.body.weight, req.body.birth_date, req.body.is_married === '1'],
         (err) => {
             if (err) {
                 console.log(err)
@@ -57,7 +57,7 @@ app.get('/update/:id', (req, res) => {
                 item.birth_date = item.birth_date.toISOString().split('T')[0]
             }
 
-            res.render('add', { item })
+            res.render('form', { item })
         }
     )
 })

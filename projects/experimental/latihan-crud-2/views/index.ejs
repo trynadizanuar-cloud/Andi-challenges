@@ -41,7 +41,7 @@
                     <%= item.birth_date ? new Date(item.birth_date).toLocaleDateString('en-CA') : '-' %>
                 </td>
                 <td>
-                    <%= item.married ? "Yes" : "Not Yet" %>
+                    <%= item.is_married ? "Yes" : "Not Yet" %>
                 </td>
                 <td>
                     <a href="/update/<%= item.id %>">Update</a>
